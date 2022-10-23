@@ -11,7 +11,6 @@ bot.on('ready', function() {
 bot.login(process.env.token);
 
 bot.on("message",message => {
-    if(message.author.bot) return; //le bot ne reponds pas au autre bot et a lui même
 	
     if (Clear.match(message)){
         return Clear.action(message)
