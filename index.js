@@ -1,16 +1,25 @@
-const Discord = require('discord.js');
-const Clear = require('./Clear')
-const bot = new Discord.Client();
-
 bot.login(process.env.token);
 
-bot.on('ready', function() {
+
+const Clear = require('./Clear')
+const {Client, GatewayIntentBits} = require("discord.js");
+
+//instance du client
+
+cons client = new Client({
+	intents :[
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages // autorisation des messages
+		]
+});
+
+client.on('ready', function() {
 	console.log("Je suis ready")
 	bot.user.setActivity('La sainte charge').catch(console.error)
 });
 
 
-bot.on('message', message => {
+client.on('messageCreate', message => {
 	
     if (Clear.match(message)){
         return Clear.action(message)
