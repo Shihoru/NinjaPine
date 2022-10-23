@@ -2,13 +2,13 @@ const Discord = require('discord.js');
 const Clear = require('./Clear')
 const bot = new Discord.Client();
 
+bot.login(process.env.token);
 
 bot.on('ready', function() {
 	console.log("Je suis ready")
 	bot.user.setActivity('La sainte charge').catch(console.error)
 });
 
-bot.login(process.env.token);
 
 bot.on("message",message => {
 	
