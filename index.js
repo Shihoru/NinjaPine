@@ -38,7 +38,7 @@ bot.on("message",message => {
     }
 	if(message.content == "Lol"){
         message.reply("@everyone Go feed https://tenor.com/view/league-of-legends-lol-meme-pepe-gif-25444442");
-        console.log("Ready pour se faire éclater);
+        console.log("Ready pour se faire éclater");
     }
 	
     });
