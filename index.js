@@ -1,4 +1,4 @@
-bot.login(process.env.token);
+Client.login(process.env.token);
 
 
 const Clear = require('./Clear')
