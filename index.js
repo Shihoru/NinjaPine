@@ -10,7 +10,7 @@ bot.on('ready', function() {
 
 bot.login(process.env.token);
 
-bot.on("messageCreate",message => {
+bot.on("message",message => {
     if(message.author.bot) return; //le bot ne reponds pas au autre bot et a lui même
 	
     if (Clear.match(message)){
