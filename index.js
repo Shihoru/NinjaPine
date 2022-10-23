@@ -37,4 +37,4 @@ bot.on("message",message => {
         console.log("Ready pour un overwatchs");
     }
 	
-    }).catch(console.error);
+    });
