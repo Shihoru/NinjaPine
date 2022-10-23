@@ -3,12 +3,11 @@ const Clear = require('./Clear')
 const bot = new Discord.Client();
 
 
-bot.login(process.env.TOKEN);
-
 bot.on('ready', function() {
 	bot.user.setActivity('Ready to play').catch(console.error)
 });
 
+bot.login(process.env.token);
 
 bot.on('message', function (message) {
 	
