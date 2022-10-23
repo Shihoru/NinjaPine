@@ -7,6 +7,7 @@ bot.login(process.env.token);
 bot.on('ready', function() {
 	console.log("Je suis ready")
 	bot.user.setActivity('La sainte charge').catch(console.error)
+	message.send("hello")
 });
 
 
