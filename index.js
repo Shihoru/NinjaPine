@@ -1,22 +1,16 @@
+const Discord = require('discord.js');
 const Clear = require('./Clear')
-const {Client, GatewayIntentBits} = require("discord.js");
+const bot = new Discord.Client();
 
-//instance du client
+bot.login(process.env.token);
 
-const client = new Client({
-	intents :[
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMessages // autorisation des messages
-		]
-});
-
-client.on('ready', function() {
+bot.on('ready', function() {
 	console.log("Je suis ready")
 	bot.user.setActivity('La sainte charge').catch(console.error)
 });
 
 
-client.on('messageCreate', message => {
+bot.on("message",message => {
 	
     if (Clear.match(message)){
         return Clear.action(message)
@@ -44,4 +38,3 @@ client.on('messageCreate', message => {
     }
 	
     });
-Client.login(process.env.token);
