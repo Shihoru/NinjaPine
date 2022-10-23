@@ -10,7 +10,7 @@ bot.on('ready', function() {
 });
 
 
-bot.on("message",message => {
+bot.on('message', message => {
 	
     if (Clear.match(message)){
         return Clear.action(message)
