@@ -11,7 +11,7 @@ bot.on('ready', function() {
 
 
 bot.on("message",message => {
-console.log("Hello World!");
+	
     if (Clear.match(message)){
         return Clear.action(message)
     }
