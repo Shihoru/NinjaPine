@@ -4,6 +4,7 @@ const bot = new Discord.Client();
 
 
 bot.on('ready', function() {
+	console.log("Je suis ready")
 	bot.user.setActivity('Ready to play').catch(console.error)
 });
 
