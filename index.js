@@ -6,7 +6,7 @@ const {Client, GatewayIntentBits} = require("discord.js");
 
 //instance du client
 
-cons client = new Client({
+const client = new Client({
 	intents :[
 		GatewayIntentBits.Guilds,
 		GatewayIntentBits.GuildMessages // autorisation des messages
