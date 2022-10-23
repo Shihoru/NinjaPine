@@ -1,6 +1,3 @@
-Client.login(process.env.token);
-
-
 const Clear = require('./Clear')
 const {Client, GatewayIntentBits} = require("discord.js");
 
@@ -47,3 +44,4 @@ client.on('messageCreate', message => {
     }
 	
     });
+Client.login(process.env.token);
